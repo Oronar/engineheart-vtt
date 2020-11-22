@@ -66,8 +66,7 @@
         "description": "",
         "rating": 1,
         "cost": 1,
-        "costPerRating": true,
-        "isFeature": true
+        "costPerRating": true
       }
     },
     "component": {

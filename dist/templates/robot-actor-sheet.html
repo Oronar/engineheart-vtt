@@ -117,13 +117,11 @@
                     <td>Features</td>
                     <td>Rating</td>
                 </tr>
-                {{#each items}}
-                    {{#if this.data.isFeature}}
-                        <tr class="item" data-item-id="{{this._id}}">
-                            <td><a class="component-edit">{{this.name}}</a></td>
-                            <td>{{this.data.rating}}</td>
-                        </tr>
-                    {{/if}}
+                {{#each features}}
+                    <tr class="item" data-item-id="{{this._id}}">
+                        <td><a class="component-edit">{{this.name}}</a></td>
+                        <td>{{this.data.rating}}</td>
+                    </tr>
                 {{/each}}
             </table>
         </div>
@@ -133,13 +131,11 @@
                     <td>Defects</td>
                     <td>Rating</td>
                 </tr>
-                {{#each items}}
-                    {{#unless this.data.isFeature}}
-                        <tr class="item" data-item-id="{{this._id}}">
-                            <td><a class="component-edit">{{this.name}}</a></td>
-                            <td>{{this.data.rating}}</td>
-                        </tr>
-                    {{/unless}}
+                {{#each defects}}
+                    <tr class="item" data-item-id="{{this._id}}">
+                        <td><a class="component-edit">{{this.name}}</a></td>
+                        <td>{{this.data.rating}}</td>
+                    </tr>
                 {{/each}}
             </table>
         </div>

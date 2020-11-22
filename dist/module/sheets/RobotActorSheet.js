@@ -5,7 +5,14 @@ export default class RobotActorSheet extends ActorSheet {
     }
 
     getData() {
-        return super.getData();
+        const data = super.getData();
+        const features = data.items.filter(item => item.type === "component" && item.data.cost >= 0);
+        const defects = data.items.filter(item => item.type === "component" && item.data.cost < 0);
+
+        data.features = features;
+        data.defects = defects;
+
+        return data;
     }
 
     get template() {
