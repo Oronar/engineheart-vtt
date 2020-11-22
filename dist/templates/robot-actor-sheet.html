@@ -1,9 +1,11 @@
 <form class="{{cssClass}}" autocomplete="off">
+    <header class="sheet-header flexrow">
+        <img class="profile" src="{{actor.img}}" title="{{actor.name}}" data-edit="img" />
+        <h1 class="charname">
+            <input name="name" type="text" value="{{actor.name}}" placeholder="{{ localize 'DND5E.Name' }}" />
+        </h1>
+    </header>
     <div class="robotinfo">
-        <div class="unit-name">
-            <label for="unitname">UNIT NAME</label>
-            <input id="unitname" type="text" name="name" value="{{actor.name}}">
-        </div>
         <div class="player-name">
             <label for="playername">PLAYER</label>
             <input id="playername" type="text" name="data.player" value="{{data.player}}">
