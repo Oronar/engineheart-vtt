@@ -1,9 +1,9 @@
 <form class="{{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" height="100" width="100" />
+        <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Name" /></h1>
+    </header>
     <div>
-        <div>
-            <label for="itemname">Name</label>
-            <input id="itemname" type="text" name="name" value="{{item.name}}">
-        </div>
         <div>
             <label for="cost">Cost</label>
             <input id="cost" type="text" name="data.cost" value="{{data.cost}}" data-dtype="Number">
