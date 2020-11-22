@@ -21,6 +21,7 @@ export default class RobotActorSheet extends ActorSheet {
 
     activateListeners(html) {
         html.find(".component-edit").click(this._onComponentEdit.bind(this));
+        html.find(".component-delete").click(this._onComponentDelete.bind(this));
 
         super.activateListeners(html);
     }
@@ -32,5 +33,13 @@ export default class RobotActorSheet extends ActorSheet {
         let item = this.actor.getOwnedItem(itemId);
 
         item.sheet.render(true);
+    }
+
+    _onComponentDelete(event) {
+        event.preventDefault();
+        let element = event.currentTarget;
+        let itemId = element.closest(".item").dataset.itemId;
+        
+        return this.actor.deleteOwnedItem(itemId);
     }
 }

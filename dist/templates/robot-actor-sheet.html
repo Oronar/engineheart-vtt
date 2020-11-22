@@ -117,12 +117,7 @@
                     <td>Features</td>
                     <td>Rating</td>
                 </tr>
-                {{#each features}}
-                    <tr class="item" data-item-id="{{this._id}}">
-                        <td><a class="component-edit">{{this.name}}</a></td>
-                        <td>{{this.data.rating}}</td>
-                    </tr>
-                {{/each}}
+                {{> "systems/engineheart-vtt/templates/partials/robot-actor-sheet-components.html" features}}
             </table>
         </div>
         <div class="defects">
@@ -131,12 +126,7 @@
                     <td>Defects</td>
                     <td>Rating</td>
                 </tr>
-                {{#each defects}}
-                    <tr class="item" data-item-id="{{this._id}}">
-                        <td><a class="component-edit">{{this.name}}</a></td>
-                        <td>{{this.data.rating}}</td>
-                    </tr>
-                {{/each}}
+                {{> "systems/engineheart-vtt/templates/partials/robot-actor-sheet-components.html" defects}}
             </table>
         </div>
     </div>

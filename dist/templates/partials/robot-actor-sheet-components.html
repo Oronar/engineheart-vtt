@@ -1,0 +1,6 @@
+{{#each this}}
+    <tr class="item" data-item-id="{{this._id}}">
+        <td><a class="component-edit">{{this.name}}</a></td>
+        <td>{{this.data.rating}}<a class="component-delete"><i class="fas fa-trash"></i></a></td>
+    </tr>
+{{/each}}
